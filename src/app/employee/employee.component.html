@@ -1,0 +1,50 @@
+<div>
+    <div *ngIf="!isFormVisible">
+      <button class="btn btn-success mb-4" (click)="showAddEmployeeForm()">Add User</button>
+      
+      <!-- Employee List Table -->
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Genre</th>
+            <th>Language</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let emp of employees">
+            <td>{{ emp.name }}</td>
+            <td>{{ emp.email }}</td>
+            <td>{{ emp.place }}</td>
+            <td>
+              <button class="btn btn-info btn-sm mr-2 " (click)="editEmployee(emp)">Edit</button>
+              <button class="btn btn-danger btn-sm ms-2" (click)="deleteEmployee(emp.id!)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <!-- Employee Form -->
+    <div *ngIf="isFormVisible">
+      <h3 class="text-info">{{ employee.id ? 'Edit' : 'Add' }} Employee</h3>
+      <form (ngSubmit)="onSubmit()" #employeeForm="ngForm">
+        <div class="form-group">
+          <label for="name">Title</label>
+          <input type="text" class="form-control" id="name" required [(ngModel)]="employee.name" name="name">
+        </div>
+        <div class="form-group">
+          <label for="email">Genre</label>
+          <input type="email" class="form-control" id="email" required [(ngModel)]="employee.email" name="email">
+        </div>
+        <div class="form-group">
+          <label for="place">Language</label>
+          <input type="text" class="form-control" id="place" required [(ngModel)]="employee.place" name="place">
+        </div>
+        <button type="submit" class="btn btn-info mt-2 ">{{ employee.id ? 'Update' : 'Add' }} Book</button>
+        <button type="button" class="btn btn-secondary ml-2 ms-2 mt-2" (click)="cancel()">Cancel</button>
+      </form>
+    </div>
+  </div>
+  

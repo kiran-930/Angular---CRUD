@@ -1,0 +1,46 @@
+{
+  "employees": [
+    {
+      "id": "1f02",
+      "name": "The Notebook",
+      "email": "Romance",
+      "place": "English",
+      "status": "Active"
+    },
+    {
+      "id": "f691",
+      "name": "The Little Prince",
+      "email": "Fantasy",
+      "place": "French",
+      "status": "Active"
+    },
+    {
+      "id": "9eba",
+      "name": "The Fault in Our Stars",
+      "email": "Adult Fiction",
+      "place": " English",
+      "status": "Active"
+    },
+    {
+      "id": "1bc8",
+      "name": "War and Peace",
+      "email": "Historical Fiction",
+      "place": "Russian",
+      "status": "Active"
+    },
+    {
+      "id": "b7db",
+      "name": "Harry Potter ",
+      "email": "Fantasy",
+      "place": " English",
+      "status": "Active"
+    },
+    {
+      "id": "2b25",
+      "name": "The Divine Comedy",
+      "email": "Epic Poetry",
+      "place": "Italian",
+      "status": "Active"
+    }
+  ]
+}
